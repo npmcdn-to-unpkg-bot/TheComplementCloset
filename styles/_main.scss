@@ -1,0 +1,148 @@
+
+// Header
+
+$dark: #272727;
+
+body {
+	color: $dark;
+}
+
+h1 {
+	text-align: center;
+	font-family: 'Prata', serif;
+	letter-spacing: 1.2px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+h3 {
+	font-size: 16px;
+	text-transform: capitalize;
+}
+
+h4 {
+	font-family: 'Prata', serif;
+}
+
+h5 {
+	text-align: center;
+	font-family: 'Prata', serif;
+}
+
+a {
+	color: $dark;
+	transition: color .5s;
+
+	&:hover {
+		color: palevioletred;
+	}
+}
+// Forms
+
+.wrapper {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.userPicks {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.clothingForms {
+	position: relative;
+
+	fieldset {
+		border: none;
+		margin: 5px;
+		padding: 10px;
+	}
+
+	select {
+		border-radius: 0;
+		-webkit-appearance: none;
+	 	background-image: url(downArrow.png);
+	    background-repeat: no-repeat;
+	    background-position: 90% center;
+	    background-size: 25px;
+	    width: 200px;
+	    padding-top: 0;
+	    padding: 15px;
+	    background-color: white;
+	    border: 1px solid $dark;
+	    cursor: pointer;
+	}
+
+	input[type=submit], button {
+		padding: 15px 50px;
+		background-color: white;
+		border: 1px solid $dark;
+		margin: 15px;
+
+			&:hover {
+				color: white;
+				background-color: $dark;
+				border: 1px solid white;
+				transition: all .5s;
+			}
+	}
+
+	button {
+		display: block;
+		margin: 0px 0px 0px 15px;
+		position: absolute;
+		bottom: 15px;
+	}
+}
+
+// Hide Form 2
+
+.hide {
+	display: none;
+}
+
+// Gallery of Clothing Items
+
+.gallery {
+	width: 50%;
+	margin: 0 auto;
+}
+
+.galleryItem {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+
+	div {
+
+	max-height: 325px;
+
+		img {
+			max-height: 300px;
+			// max-width: 100%;
+		}
+	}
+}
+
+#galleryTwo .galleryItem {
+	flex-direction: column-reverse;
+}
+
+blockquote {
+	text-align: center;
+	background-color: $dark;
+	color: white;
+	padding: 5px;
+	margin: 25px 0px 0px 0px;	
+}
+footer {
+	text-align: center;
+
+	p {
+		display: inline-block;
+	}
+	padding: 10px 25px;
+}
