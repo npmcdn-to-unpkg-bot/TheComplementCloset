@@ -1,0 +1,23 @@
+@media all and (max-width: 940px) {
+	.gallery {
+		width: 75%;
+	}
+}
+
+@media all and (max-width: 900px) {
+
+	.userPicks {
+		flex-wrap: wrap;
+	}
+}
+
+@media all and (max-width: 570px) {
+	.gallery {
+		width: 100%;
+	}
+
+
+	.galleryItem div img {
+		width: 80%;
+	}
+}

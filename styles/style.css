@@ -135,19 +135,22 @@ h1 {
   text-align: center;
   font-family: 'Prata', serif;
   letter-spacing: 1.2px;
-  padding-top: 30px;
-  padding-bottom: 30px; }
+  padding: 30px 15px; }
 
 h3 {
   font-size: 16px;
-  text-transform: capitalize; }
+  text-transform: capitalize;
+  padding: 0 20px; }
 
 h4 {
-  font-family: 'Prata', serif; }
+  font-family: 'Prata', serif;
+  padding: 0 10px; }
 
 h5 {
   text-align: center;
-  font-family: 'Prata', serif; }
+  font-family: 'Prata', serif;
+  font-size: 14px;
+  padding: 0 10px; }
 
 a {
   color: #272727;
@@ -189,22 +192,34 @@ a {
     padding: 15px;
     background-color: white;
     border: 1px solid #272727;
-    cursor: pointer; }
+    cursor: pointer;
+    -moz-appearance: none; }
   .clothingForms input[type=submit], .clothingForms button {
     padding: 15px 50px;
-    background-color: white;
+    background-color: #272727;
     border: 1px solid #272727;
-    margin: 15px; }
+    margin: 15px;
+    color: white;
+    width: 200px; }
     .clothingForms input[type=submit]:hover, .clothingForms button:hover {
       color: white;
-      background-color: #272727;
+      background-color: palevioletred;
       border: 1px solid white;
       -webkit-transition: all .5s;
       transition: all .5s; }
   .clothingForms button {
     display: block;
-    margin: 0px 0px 0px 15px;
-    bottom: 15px; }
+    margin: 0px 15px;
+    bottom: 15px;
+    width: 200px; }
+    .clothingForms button.reset {
+      background-color: white;
+      color: palevioletred;
+      border: 1px solid palevioletred; }
+      .clothingForms button.reset:hover {
+        color: white;
+        border-color: white;
+        background-color: palevioletred; }
 
 .hide {
   display: none; }
@@ -212,6 +227,8 @@ a {
 .gallery {
   width: 50%;
   margin: 0 auto; }
+  .gallery h3 {
+    text-align: center; }
 
 .galleryItem {
   width: 100%;
@@ -249,3 +266,21 @@ footer {
   padding: 10px 25px; }
   footer p {
     display: inline-block; }
+
+section.clothingDisplay {
+  margin-top: 60px; }
+
+@media all and (max-width: 940px) {
+  .gallery {
+    width: 75%; } }
+
+@media all and (max-width: 900px) {
+  .userPicks {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; } }
+
+@media all and (max-width: 570px) {
+  .gallery {
+    width: 100%; }
+  .galleryItem div img {
+    width: 80%; } }

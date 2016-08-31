@@ -15,10 +15,11 @@
 	<h1>The Complement Closet</h1>
 </header>	
 	<section class="clothingForms wrapper">
-			<h5>Please pick a colour and an article of clothing: </h5>
+			<h5>Please pick a colour and an article of clothing then press submit: </h5>
 		<form class="userPicks" id="clothingFormOne">
 			<fieldset id="colorFormOne">
-		    	<select id="clothingColorOne" name="clothingColorOne" class="colorDrop">
+		    	<select id="clothingColorOne" name="clothingColorOne" class="colorDrop" required>
+		    		<option value="" disabled selected>Clothing Color</option>
 		    	    <option value="c7">Red</option>
 		    	    <option value="c3">Orange</option>
 		    	    <option value="c4">Yellow</option>
@@ -36,7 +37,8 @@
 		    	</select>
 			</fieldset>
 			<fieldset id="categoryFormOne">
-				<select id="clothingCatOne" name="clothingCatOne">
+				<select id="clothingCatOne" name="clothingCatOne" required>
+					<option value="" disabled selected>Clothing Article</option>
 		    	    <option value="womens-tops">Tops</option>
 		    	    <option value="sweaters">Knitwear</option>
 		    	    <option value="skirts">Skirts</option>
@@ -51,14 +53,15 @@
 				<input type="submit" name="submitColor">
 		</form>
 	<div class="hide">
-		<h5>Pick another article to match. We recommend the following colours:</h5>
+		<h5>Pick another colour and article to match then press submit. We recommend the following colours:</h5>
 		<form class="userPicks" id="clothingFormTwo">
 			<fieldset id="colorFormTwo">
-		    	<select id="clothingColorTwo" name="clothingColorTwo" class="colorDrop">
+		    	<select id="clothingColorTwo" name="clothingColorTwo" class="colorDrop" required>
 		    	</select>
 			</fieldset>
 			<fieldset id="categoryFormTwo">
-				<select id="clothingCatTwo" name="clothingCatTwo">
+				<select id="clothingCatTwo" name="clothingCatTwo" required>
+					<option value="" disabled selected>Clothing Article</option>
 		    	    <option value="womens-tops">Tops</option>
 		    	    <option value="sweaters">Knitwear</option>
 		    	    <option value="skirts">Skirts</option>

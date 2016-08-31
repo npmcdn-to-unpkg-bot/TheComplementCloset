@@ -40,8 +40,14 @@ shopApp.getClothes = function (color, category, galleryID) {
 		}
 	})
 	.then(function(clothingData){
+		if (clothingData.products.length > 0) {
 		console.log(clothingData);
 		shopApp.displayClothes(clothingData.products, galleryID);
+		}
+		else {
+			var noResults = $("<h3>").text("No results found! Please try a different search.");
+			$(galleryID).append(noResults);
+		}
 	});
 };
 
@@ -64,8 +70,8 @@ shopApp.init = function () {
 			console.log(colour.name);
 		var optionContainer = $("<option>").text(colour.name).val(colour.code);
 		$("#clothingColorTwo").append(optionContainer);
-
 		});
+		$("#clothingColorTwo").prepend('<option value="" disabled selected>Clothing Color</option>');
 	});
 	$("#clothingFormTwo").on("submit", function(e){
 		e.preventDefault();
@@ -82,10 +88,10 @@ shopApp.init = function () {
 };
 
 shopApp.reset = function () {
-	$("#clothingColorOne").val("c7");
-	$("#clothingCatOne").val("womens-tops");
+	$("#clothingColorOne").val("");
+	$("#clothingCatOne").val("");
 	$("#clothingColorTwo").val("");
-	$("#clothingCatTwo").val("womens-tops");
+	$("#clothingCatTwo").val("");
 	$(".gallery").flickity('destroy');
 	$(".gallery").empty();
 	$(".hide").hide();
