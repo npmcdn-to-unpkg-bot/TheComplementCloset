@@ -1,6 +1,6 @@
 var shopApp = {};
 shopApp.apiKey = "uid6081-34742991-73";
-shopApp.apiUrl = "http://api.shopstyle.com/api/v2/products?fl=r27&fl=r494&fl=r1577&fl=r1870&fl=r23&fl=r84&fl=r231&fl=r208&fl=r1060&fl=r483&fl=r2403"
+shopApp.apiUrl = "http://api.shopstyle.com/api/v2/products?fl=r27&fl=r494&fl=r23&fl=r84&fl=r1060&fl=r483&fl=r2403fl=r1340&fl=r1787&fl=r1659&fl=r299&fl=r1402&fl=r427&fl=r165"
 
 
 //get products from API
@@ -24,7 +24,7 @@ shopApp.displayClothes = function(clothingPicks, galleryID) {
 };
 
 shopApp.getClothes = function (color, category, galleryID) {
-	var randomOffset = Math.floor(Math.random()*75);
+	var randomOffset = Math.floor(Math.random()*35);
 	 $.ajax({
 		url: shopApp.apiUrl,
 		method: "GET",
@@ -42,6 +42,7 @@ shopApp.getClothes = function (color, category, galleryID) {
 	.then(function(clothingData){
 		if (clothingData.products.length > 0) {
 		console.log(clothingData);
+		console.log(randomOffset);
 		shopApp.displayClothes(clothingData.products, galleryID);
 		}
 		else {
